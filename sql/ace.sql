@@ -1,13 +1,9 @@
-use ace;
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+FLUSH privileges;
 
-DROP TABLE ace.tbl_ace_vigencias;
-DROP TABLE ace.tbl_ace_tipos_periodo;
-DROP TABLE ace.tbl_ace_productos_regla;
-DROP TABLE ace.tbl_ace_tipos_producto;
-DROP TABLE ace.tbl_ace_caracteristicas;
-DROP TABLE ace.tbl_ace_tipos_caracteristica;
-DROP TABLE ace.tbl_ace_reglas;
-DROP TABLE ace.tbl_ace_tipos_regla;
+CREATE DATABASE ace;
+
+use ace;
 
 CREATE TABLE ace.tbl_ace_tipos_regla(
 	id smallint unsigned not null auto_increment,

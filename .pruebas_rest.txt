@@ -1,0 +1,17 @@
+http://localhost:3002/reglas
+
+###
+
+POST http://localhost:3002/reglas/validarOrden HTTP/1.1
+content-type: application/json
+
+{
+    "producto": "RV",
+    "idAsesor": 12345,
+    "idAcudiente": 2345,
+    "idCliente": 12345
+}
+
+###
+
+http://localhost:3001/relaciones/12345/2345

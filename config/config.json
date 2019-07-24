@@ -3,7 +3,7 @@
     "username": "root",
     "password": "password",
     "database": "ace",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql",
     "port": "32768"
   },
@@ -17,10 +17,10 @@
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "password": "password",
+    "database": "ace",
+    "host": "db",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "port": "3306"
   }
 }
