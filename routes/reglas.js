@@ -34,8 +34,8 @@ router.post('/validarOrden', async (req, res, next) => {
     }
     if (tipoReglaHabilitada(prodRegla, 2))
       axios.all([
-        axios.get(`http://api-realacionados:3001/relaciones/${ req.body.idAsesor }/${ req.body.idCliente }`),
-        axios.get(`http://api-realacionados:3001/relaciones/${ req.body.idAsesor }/${ req.body.idAcudiente }`)])
+        axios.get(`http://api-realacionados:3005/relaciones/${ req.body.idAsesor }/${ req.body.idCliente }`),
+        axios.get(`http://api-realacionados:3005/relaciones/${ req.body.idAsesor }/${ req.body.idAcudiente }`)])
         .then(axios.spread((result1, result2) => {
           if(result1.data.relacion === 'NO_RELACIONADO' && result2.data.relacion === 'NO_RELACIONADO'){
             res.send({ status: "OK" });

@@ -17,7 +17,23 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3001:3001
+      - 3005:3005
+  api-ordenes:
+    image: api-ordenes
+    build: ../api-ordenes
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    depends_on:
+      - api-reglas
+  app-ordenes:
+    image: app-ordenes
+    build: ../app-ordenes
+    ports:
+      - 4200:4200
+    depends_on:
+      - api-ordenes
   db:
     build: ./sql
     ports:
